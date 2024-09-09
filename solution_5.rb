@@ -8,4 +8,5 @@ while i<str.length/2
   i+=1
   j+=1 
 end
+
 print a

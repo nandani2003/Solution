@@ -7,5 +7,5 @@ for i in (0..arr.length-1) do
   end
 end
 end
-  print arr
+print arr
 
