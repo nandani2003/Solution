@@ -7,4 +7,5 @@ sum=sum+arr[i]
 i+=1;
  arr2<<sum
 end
+
 print arr2
