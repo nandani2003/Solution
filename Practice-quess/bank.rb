@@ -1,16 +1,15 @@
   Name="Nandani Verma"
   $amount=0
-
-  module  Transcationable   
-      Arr=[] 
+  $arr=[]
+  module  Transcationable      
       def deposite(amt_depo)
-      Arr.push("Deposite:#{amt_depo}")
+      $arr.push("Deposite:#{amt_depo}")
       $amount+=amt_depo
       puts "Deposit #{amt_depo} total_amt: #{$amount}"
       end 
 
       def withdraw(amt_withdraw)
-      Arr.push("Withdrwal:#{amt_withdraw}")
+      $arr.push("Withdrwal:#{amt_withdraw}")
       $amount-=amt_withdraw
       puts "Withdrwal #{amt_withdraw} total_amt: #{$amount}"      
     end
@@ -43,7 +42,7 @@
 
       protected
       def transcaction_history
-      print Arr
+      print "#{$arr}"
       end  
   end
   c1=Bank.new
