@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Form.css">
+  <title>Document</title>
+</head>
+<body>
+<h1>hello tanu</h1>
+<p>I am learning Rails!</p>
+   <div class ="center">
+  <form >
+    <label for="name">Name:</label>
+    <input  name="name"type="text"placeholder="enter your name" id="name"required><br><br>
+    <label for="email">Email:</label>
+    <input  name="email"type="email"placeholder="enter your email"id="email"required><br><br>
+     <label for="contact">Contact:</label>
+    <input  name="contact"type="number"placeholder="enter your name"id="contact"required><br><br>
+    <label for="age">Age</label>
+    <input  name="age"type="number"placeholder="enter your age"id="age"required><br><br>
+   
+    <button id="submit" onclick="displaydata(e)">Submit details</button>
+  </form>
+
+
+    <table id="display" >
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Contact</th>
+    <th>Age</th>
+  </tr>
+</thead>
+    </table>
+   </div>
+</body>
+<script >
+let row=1;
+function displaydata(e){
+e.preventDefault();
+let formData=[
+  let name=document.getElementById("name").value;
+  let email=document.getElementById("email").value;
+  let contact=document.getElementById("contact").value;
+  let age=document.getElementById("age").value;
+];
+let display=document.getElementById("display");
+  let newRow=display.insertRow(row);
+  formData.forEach((data,index)=>{
+  newRow.insertCell(index).innerHTML=data;});
+display.style.display='block';
+
+}
+
+</script>
+</html>
